@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap')
+
+.banner
+    position: fixed
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+
+    font-family: "Roboto Mono"
+    font-size: 3.5rem
+    padding: 50px 0 0 100px
+    display: flex
+    align-items: stretch
+    flex-direction: column
+    font-weight: 700
+    color: #fff
+    background-image: radial-gradient($logo-color 0%, $logo-darker)
+    background-repeat: no-repeat
+    height: 100vh
+    opacity: 1
+    transition: opacity 1.5s linear
+    z-index: 5
+    &__logo
+        display: block
+        position: absolute
+        width: 12%
+        top: 10%
+        right: 20%
+        animation: logo-move 10s linear infinite
+        animation-direction: alternate
+    &__text
+        position: absolute
+        text-transform: uppercase
+        top: 80%
+        left: 50%
+        font-size: 1rem
+        transform: translate(-50%, -50%)
+        opacity: 0.3
+    &--hidden
+        opacity: 0.1
+
+.t3xts
+    line-height: 1
+    position: relative
+    top: 35%
+    left: 25%
+    perspective: 1000px
+    text-transform: uppercase
+    animation: text-move 15s linear infinite
+    animation-direction: alternate
+
+.t3xt
+    transform-style: preserve-3d
+    position: absolute
+    top: 0
+    text-transform: uppercase
+.t3xt-out
+    animation: text-out .5s ease
+.t3xt-in
+    animation: text-in .5s ease
+
+@keyframes text-out
+    to
+        transform: rotateX(90deg)
+        opacity: 0
+@keyframes text-in
+    from
+        opacity: 0
+        transform: rotateX(-90deg)
+    to
+        transform: rotateX(0deg)
+        opacity: 1
+
+@keyframes logo-move
+    from
+        transform: translate(0, 0) scale(100%)
+    to
+        transform: translate(-5%, 0) scale(105%)
+
+@keyframes text-move
+    from
+        transform: translate(-5%, 0) scale(100%)
+        letter-spacing: 1px
+    to
+        transform: translate(0%, 0) scale(110%)
+        letter-spacing: 3px

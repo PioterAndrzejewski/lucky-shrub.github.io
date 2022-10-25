@@ -1,0 +1,182 @@
+
+.main-logo
+    position: absolute
+    width: 16vh
+    height: 16vh
+    top: 4%
+    left: -20%
+    border-radius: 50%
+    background-color: $logo-darker
+    cursor: pointer
+    @media screen and (max-width: $big)
+        left: 5%
+        width: 8vh
+        height: 8vh
+    @media screen and (max-width: $tablet)
+        top: 2%
+        left: 3%
+        width: 7vh
+        height: 7vh
+    @media screen and (max-width: $phone)
+        display: none
+    &__image
+        display: block
+        position: relative
+        margin: 1vh auto
+        height: 13vh
+        @media screen and (max-width: $big)
+            height: 6vh
+        @media screen and (max-width: $tablet)
+            height: 5vh
+
+.section-first
+    scroll-snap-align: start
+    position: relative
+    max-width: 1024px
+    margin: 0 auto
+    height: 100vh
+    @media screen and (max-width: $big)
+        overflow: hidden
+        margin-left: 50px
+        margin-right: 50px
+
+.main-nav
+    position: relative
+    padding-top: 10%
+    margin-bottom: 6%
+    color: $logo-darker
+    border-bottom: solid 1px $logo-darker
+    @media screen and (max-width: $phone)
+        padding-top: 10%
+        margin-bottom: 3%
+    &__list
+        display: flex
+        justify-content: right
+        list-style: none
+        text-align: center
+    &__list-item
+        padding: 10px 10px 0 10px
+        @media screen and (max-width: $phone)
+            padding: 5px 5px 0 5px
+        &:hover
+            background-color: $logo-darker
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+            transition: 0.3s
+            & a
+                color: $main-light
+        &--active
+            background-color: $logo-darker
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+            padding: 10px 0px 10px 20px
+            &::after
+                content: ""
+                position: relative
+                top: 200%
+                left: -45%
+                border-top: 10px solid $logo-darker
+                border-bottom: 10px solid transparent
+                border-left: 10px solid transparent
+                border-right: 10px solid transparent
+            & a
+                color: $main-light
+
+    &__link
+        display: inline-block
+        font-family: $font-main
+        font-size: 0.8em
+        letter-spacing: 0.7px
+        font-weight: 700
+        color: $logo-darker
+        text-decoration: none
+        text-transform: uppercase
+        @media screen and (max-width: $phone)
+            font-size: 0.6em
+            letter-spacing: 0
+    &__divline
+        margin: 0 10px
+        width: 1px
+        height: 0.7em
+        align-self: flex-end
+        background-color: $logo-darker
+
+.slogan
+    display: flex
+    height: 75vh
+    align-items: flex-start
+    @media screen and (max-width: $big)
+        margin-top: 100px
+    @media screen and (max-width: $phone)
+        flex-wrap: wrap
+        justify-content: center
+        margin-top: 50px
+
+    &__text
+        font-family: $font-main
+        font-weight: 700
+        text-align: center
+        align-self: flex-start
+        margin-right: 5%
+        @media screen and (max-width: $phone)
+            flex-wrap: wrap
+            margin: 0 auto
+        &--big
+            margin-bottom: 10px
+            font-size: 5em
+            transform: translateX(-200vw)
+            @media screen and (max-width: $phone)
+                font-size: 2em
+                text-align: center
+            &--animate
+                animation: jumpin 1.2s linear
+                animation-fill-mode: forwards
+        &--medium
+            font-size: 2.6em
+            letter-spacing: 0.135em
+            transform: translateX(-200vw)
+            @media screen and (max-width: $phone)
+                font-size: 2.4em
+            &--animate
+                animation: jumpin 1.3s linear
+                animation-fill-mode: forwards
+        &--mediumer
+            font-size: 2.2em
+            transform: translateX(-200vw)
+            @media screen and (max-width: $phone)
+                font-size: 2em
+            &--animate
+                animation: jumpin 1.0s linear
+                animation-fill-mode: forwards
+        &--small
+            margin-top: 10%
+            font-size: 1em
+            text-align: justify
+            text-justify: inter-characters
+            text-transform: uppercase
+            transform: translateX(-200vw)
+            @media screen and (max-width: $phone)
+                font-size: 0.5em
+                padding: 0 20% 10px 20%
+            &--animate
+                animation: jumpin 1.2s linear
+                animation-fill-mode: forwards
+
+    &__image
+        display: block
+        max-height: 55vh
+        padding-top: 5%
+        transform: translateX(200vw)
+        @media screen and (max-width: $big)
+            max-height: 40vh
+        @media screen and (max-width: $phone)
+            max-height: 50vh
+            padding-top: 1%
+            padding-bottom: 20%
+        &--animate
+            animation: jumpin 1.5s linear
+            animation-fill-mode: forwards
+
+@keyframes jumpin
+    100%
+        transform: translateX(0)

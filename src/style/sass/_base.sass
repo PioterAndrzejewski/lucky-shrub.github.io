@@ -36,223 +36,6 @@ html
             &:hover
                 color: white
 
-.main-logo
-    position: absolute
-    width: 16vh
-    height: 16vh
-    top: 4%
-    left: -20%
-    border-radius: 50%
-    background-color: $logo-darker
-    cursor: pointer
-    &__image
-        display: block
-        position: relative
-        margin: 1vh auto
-        height: 13vh
-
-.section-first
-    scroll-snap-align: start
-    position: relative
-    max-width: 1024px
-    margin: 0 auto
-    height: 100vh
-
-.main-nav
-    position: relative
-    padding-top: 10%
-    margin-bottom: 6%
-    color: $logo-darker
-    border-bottom: solid 1px $logo-darker
-    &__list
-        display: flex
-        justify-content: right
-        list-style: none
-        text-align: center
-    &__list-item
-        padding: 10px 10px 0 10px
-        &:hover
-            background-color: $logo-darker
-            border-top-left-radius: 10px
-            border-top-right-radius: 10px
-            transition: 0.3s
-            & a
-                color: $main-light
-        &--active
-            background-color: $logo-darker
-            border-top-left-radius: 10px
-            border-top-right-radius: 10px
-            padding: 10px 0px 10px 20px
-            &::after
-                content: ""
-                position: relative
-                top: 200%
-                left: -45%
-                border-top: 10px solid $logo-darker
-                border-bottom: 10px solid transparent
-                border-left: 10px solid transparent
-                border-right: 10px solid transparent
-            & a
-                color: $main-light
-
-    &__link
-        display: inline-block
-        font-family: $font-main
-        font-size: 0.8em
-        letter-spacing: 0.7px
-        font-weight: 700
-        color: $logo-darker
-        text-decoration: none
-        text-transform: uppercase
-    &__divline
-        margin: 0 10px
-        width: 1px
-        height: 0.7em
-        align-self: flex-end
-        background-color: $logo-darker
-
-.slogan
-    display: flex
-    height: 75vh
-    align-items: flex-start
-    &__text
-        font-family: $font-main
-        font-weight: 700
-        text-align: center
-        align-self: flex-start
-        margin-right: 5%
-        &--big
-            margin-bottom: 10px
-            font-size: 5em
-            transform: translateX(-200vw)
-            &--animate
-                animation: jumpin 1.2s linear
-                animation-fill-mode: forwards
-        &--medium
-            font-size: 2.6em
-            letter-spacing: 0.135em
-            transform: translateX(-200vw)
-            &--animate
-                animation: jumpin 1.3s linear
-                animation-fill-mode: forwards
-        &--mediumer
-            font-size: 2.2em
-            transform: translateX(-200vw)
-            &--animate
-                animation: jumpin 1.0s linear
-                animation-fill-mode: forwards
-        &--small
-            margin-top: 10%
-            font-size: 1em
-            text-align: justify
-            text-justify: inter-characters
-            text-transform: uppercase
-            transform: translateX(-200vw)
-            &--animate
-                animation: jumpin 1.2s linear
-                animation-fill-mode: forwards
-
-    &__image
-        display: block
-        max-height: 55vh
-        padding-top: 5%
-        transform: translateX(200vw)
-        &--animate
-            animation: jumpin 1.5s linear
-            animation-fill-mode: forwards
-
-.main
-    position: relative
-    scroll-snap-align: end
-    height: 100vh
-    overflow: hidden
-    background-color: #0f0f0f
-    color: $main-light
-    font-family: $font-main
-    font-size: 2em
-    &__slogan_wrapper
-        position: absolute
-        top: 15%
-        left: 25%
-        transform: translateX(200vw)
-        &--animate
-            transition: linear 0.3s
-            transform: translateX(0)
-    &__slogan
-        font-family: $font-main
-        font-weight: 700
-        letter-spacing: 1.5px
-    &__slogan-contact
-        display: inline-block
-        margin-top: 15px
-        padding-bottom: 10px
-        font-weight: 300
-        color: white
-        text-decoration: none
-        transition: letter-spacing 4s linear
-        &:hover
-            border-bottom: white solid 1px
-        &--animate
-            letter-spacing: 2px
-
-.main-section
-    position: absolute
-    display: flex
-    top: 25%
-    right: 10%
-    height: 40%
-    transform: translateX(-200vw)
-    &--animate
-        transition: linear 1s
-        transform: translateX(0)
-
-.article
-    display: block
-    position: relative
-    flex: 1
-    height: 100%
-    width: 300px
-    margin: 2%
-    font-size: 0.2em
-    background-color: $main-light
-    border-radius: 20px
-    &__heading
-        position: absolute
-        text-align: right
-        padding: 30px
-        top: 5%
-        right: 8%
-        font-weight: 700
-        text-transform: uppercase
-        color: white
-        font-size: 3em
-        filter: brightness(100%)
-    &__paragraph
-        width: 70%
-        position: absolute
-        bottom: 20%
-        padding: 20px
-        color: white
-        font-size: 2em
-    &:nth-child(1)
-        color: white
-        background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.9)) , url('../../../assets/images/garden1.jpg')
-        background-repeat: no-repeat
-        background-size: cover
-        background-position: -50px
-    &:nth-child(2)
-        color: white
-        background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.9)) , url('../../../assets/images/plants.jpg')
-        background-repeat: no-repeat
-        background-size: cover
-        background-position: -50px
-    &:nth-child(3)
-        color: white
-        background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.9)) , url('../../../assets/images/team.jpg')
-        background-repeat: no-repeat
-        background-size: cover
-        background-position: -50px
-
 .footer
     position: fixed
     display: flex
@@ -264,28 +47,38 @@ html
     bottom: 0%
 
     background-color: $logo-darker
+    @media screen and (max-width: $phone)
+        height: 10vh
     &__logo
         display: block
         height: 60%
         padding-right: 6%
         opacity: 0.8
+    @media screen and (max-width: $tablet)
+        padding-right: 30%
     &__copyright
         font-size: 0.9em
         color: $main-light
         font-family: $font-main
         opacity: 0.8
+    @media screen and (max-width: $phone)
+        font-size: 0.7em
     &__image_1
         display: block
         position: relative
         top: -80%
         right: 20%
         height: 80%
+        @media screen and (max-width: $tablet)
+            right: 5%
     &__image_2
         display: block
         position: relative
         top: -75%
         left: 25%
         height: 75%
+        @media screen and (max-width: $tablet)
+            left: 70%
 
 .scroller
     position: fixed
@@ -298,6 +91,10 @@ html
     cursor: pointer
     opacity: 1
     transition: 0.3s
+    @media screen and (max-width: $phone)
+        width: 40px
+        height: 40px
+        opacity: 0.7
     &:hover
         transition: 0.5s
         transform: translateY(-15px)
@@ -310,9 +107,8 @@ html
         color: $main-light
         font-size: 1.5em
     &--hidden
-        opacity: 0.3
         display: none
-
-@keyframes jumpin
-    100%
-        transform: translateX(0)
+    @media screen and (max-width: $phone)
+        bottom: 12%
+        right: 7%
+        font-size: 0.85em

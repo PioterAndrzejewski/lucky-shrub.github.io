@@ -1,0 +1,143 @@
+
+.main
+    position: relative
+    scroll-snap-align: center
+    min-height: 100vh
+    background-color: #0f0f0f
+    color: $main-light
+    font-family: $font-main
+    font-size: 2em
+    @media screen and (max-width: $phone)
+        min-height: 200vh
+
+    &__slogan_wrapper
+        position: absolute
+        top: 15%
+        left: 25%
+        transform: translateX(200vw)
+        &--animate
+            transition: linear 0.3s
+            transform: translateX(0)
+        @media screen and (max-width: $big)
+            top: 10%
+            left: 5%
+        @media screen and (max-width: $phone)
+            top: 3%
+    &__slogan
+        font-family: $font-main
+        font-weight: 700
+        letter-spacing: 1.5px
+    @media screen and (max-width: $tablet)
+        padding-right: 20px
+    &__slogan-contact
+        display: inline-block
+        margin-top: 15px
+        padding-bottom: 10px
+        font-weight: 300
+        color: white
+        text-decoration: none
+        transition: letter-spacing 4s linear
+        &:hover
+            border-bottom: white solid 1px
+        &--animate
+            letter-spacing: 2px
+
+.main-section
+    position: absolute
+    display: flex
+    top: 25%
+    right: 10%
+    height: 40%
+    transform: translateX(-200vw)
+    @media screen and (max-width: $big)
+        right: 6%
+    @media screen and (max-width: $phone)
+        flex-wrap: wrap
+        margin-bottom: 10vh
+        top: 235px
+    &--animate
+        transition: linear 1s
+        transform: translateX(0)
+        @media screen and (max-width: $phone)
+            transition: none
+
+.article
+    display: block
+    position: relative
+    flex: 1
+    height: 100%
+    width: 300px
+    margin: 2%
+    font-size: 0.2em
+    background-color: $main-light
+    border-radius: 20px
+    &:hover
+        cursor: pointer
+    @media screen and (max-width: $tablet)
+        width: 28vw
+        height: 45vw
+    @media screen and (max-width: $phone)
+        width: 25vw
+        height: 35vw
+
+        scroll-snap-align: center
+        height: 50vh
+        min-width: 60vw
+        left: 50%
+        transform: translateX(-50%)
+    &__heading
+        position: absolute
+        text-align: right
+        padding: 30px
+        top: 5%
+        right: 8%
+        font-weight: 700
+        text-transform: uppercase
+        color: white
+        font-size: 3em
+        letter-spacing: 2px
+        filter: brightness(100%)
+        @media screen and (max-width: $tablet)
+            font-size: 4em
+    &__paragraph
+        width: 70%
+        position: absolute
+        bottom: 20%
+        padding: 20px
+        color: white
+        font-size: 2em
+        @media screen and (max-width: $tablet)
+            background-position: 0px
+        @media screen and (max-width: $phone)
+            font-size: 3em
+    &:nth-child(1)
+        color: white
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.9)) , url('../../../assets/images/garden1.jpg')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: -50px
+        &:hover
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5)) , url('../../../assets/images/garden1.jpg')
+        @media screen and (max-width: $tablet)
+            background-position: 0px
+
+    &:nth-child(2)
+        color: white
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.9)) , url('../../../assets/images/plants.jpg')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: -50px
+        &:hover
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5)) , url('../../../assets/images/plants.jpg')
+        @media screen and (max-width: $tablet)
+            background-position: 0px
+    &:nth-child(3)
+        color: white
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.9)) , url('../../../assets/images/team.jpg')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: -50px
+        &:hover
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5)) , url('../../../assets/images/team.jpg')
+        @media screen and (max-width: $tablet)
+            background-position: 0px

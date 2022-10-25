@@ -59,7 +59,6 @@ body {
 html {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
-  overflow-x: hidden;
 }
 
 .login-bar {

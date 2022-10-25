@@ -42,7 +42,6 @@ let t3xts = [
 
 // start it off
 let bannerFunction = setTimeout(changetext, 1000);
-
 function changetext() {
 	if (wordIndex > 2) {
 		wordIndex = 0;

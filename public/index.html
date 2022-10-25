@@ -9,7 +9,13 @@
     <meta name="Author" content="Lucky Shrub">
     <link rel="stylesheet" href="../src/style/css/style.css">
 
-    <script src="../src/scripts/banner.js" defer> </script>
+    <script src="../src/scripts/banner.js" defer>
+        
+    </script>
+    <script src="../src/scripts/app.js" defer>
+        
+    </script>
+    <script src="https://kit.fontawesome.com/d4963600d0.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -18,50 +24,87 @@
         <div class="t3xts t3xt-1">We are the</div>
         <div class="t3xts t3xt-2">Lucky Shrub</div>
         <div class="t3xts t3xt-3"></div>
-        <img src="../assets/images/Asset 3@3x.png" alt="Logo of Lucky Shrub" class="banner__logo">
+        <img src="../assets/images/Asset3@3x.png" alt="Logo of Lucky Shrub" class="banner__logo">
         <div class="banner__text">Press anywhere to continue</div>
     </div>
 
-    
-    <header class="header">
-        <img src="../assets/images/Asset 2@3x.png" alt="Logo of Lucky Shrub" class="header__logo">
-    </header>
-    <nav class="main-nav">
-        <ul class="main-nav__list">
-            <li class="main-nav__list-item"><a href="index.html" class="main-nav__link">Home</a></li>
-            <li class="main-nav__list-item"><a href="menu.html" class="main-nav__link">Our designs</a></li>
-            <li class="main-nav__list-item"><a href="book.html" class="main-nav__link">Our plant nursery</a></li>
-            <li class="main-nav__list-item"><a href="about.html" class="main-nav__link">Meet our team</a></li>
-        </ul>
-    </nav>
+
+        <aside class="login-bar">
+            <p class="login-bar__text">Client Login</p>
+        </aside>
+
+
+
+        <section class="section-first">
+        
+            <header class="main-logo">
+                <img src="../assets/images/Asset3@3x.png" alt="Logo of Lucky Shrub" class="main-logo__image">
+            </header>
+
+
+        <nav class="main-nav">
+            <ul class="main-nav__list">
+                <li class="main-nav__list-item main-nav__list-item--active"><a href="index.html" class="main-nav__link">Home</a></li>
+                <div class="main-nav__divline"></div>
+                <li class="main-nav__list-item"><a href="menu.html" class="main-nav__link">Our designs</a></li>
+                <div class="main-nav__divline"></div>
+                <li class="main-nav__list-item"><a href="book.html" class="main-nav__link">Our plant nursery</a></li>
+                <div class="main-nav__divline"></div>
+                <li class="main-nav__list-item"><a href="about.html" class="main-nav__link">Meet our team</a></li>
+            </ul>
+        </nav>
+        
+        <article class="slogan">
+            <div class="slogan__text">
+                <div class="slogan__text slogan__text--big">
+                    WE'RE GOOD.
+                </div>
+                <div class="slogan__text slogan__text--medium">
+                    JUST ASK
+                </div>
+                <div class="slogan__text slogan__text--mediumer">
+                    OUR CLIENTS.
+                </div>
+                
+                <div class="slogan__text slogan__text--small">
+                    Garden design + creation + garden maintenance + landscaping + plant nursery + indoor and outdoor plants + IT'S WHAT WE LOVE to do 
+                </div>
+            </div>
+            <img src="../assets/images/main_image.png" alt="Logo of Lucky Shrub" class="slogan__image">
+        </article>
+        </section>
 
     <main class="main">
+        <div class="main__slogan_wrapper">
+        <p class="main__slogan">Our collaborative approach turns clients into partners.</p>
+        <a class="main__slogan-contact" href="about.html">Let's talk about your project.</a>
+        </div>
         <section class="main-section">
             <article class="article">
-                <h1 class="article__section">Heading 1</h1>
-                <p class="article__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem maiores soluta, repudiandae id temporibus consectetur dolorem debitis repellendus dolore!</p>
-            </article>
-        <section class="main-section">
-            <article class="article">
-                <h1 class="article__section">Heading 2</h1>
-                <p class="article__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem maiores soluta, repudiandae id temporibus consectetur dolorem debitis repellendus dolore!</p>
+                <h1 class="article__heading">Gardens we design</h1>
+                <p class="article__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </article>
             <article class="article">
-                <h1 class="article__section">Heading 3</h1>
-                <p class="article__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem maiores soluta, repudiandae id temporibus consectetur dolorem debitis repellendus dolore!</p>
+                <h1 class="article__heading">Plant nursery</h1>
+                <p class="article__paragraph">Sit amet consectetur adipisicing elit!</p>
+            </article>
+            <article class="article">
+                <h1 class="article__heading">Our team</h1>
+                <p class="article__paragraph">Ad quidem maiores soluta, repudiandae id temporibus consectetur dolorem debitis repellendus dolore!</p>
             </article>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="footer__logo">
-            <img src="../assets/images/Asset 3@3x.png" alt="Lucky shrub logotype">
-        </div>
-        <div class="footer__copyright">
-            <p class="footer__copyright_text">
+            <img src="../assets/images/footer-park1.png" alt="" class="footer__image_1">
+            <img src="../assets/images/footer-nursery.png" alt="" class="footer__image_2">
+            <img src="../assets/images/Asset3@3x.png" alt="Lucky shrub logotype" class="footer__logo">
+            <p class="footer__copyright">
                 Copyright Little Lemon
             </p>
-        </div>
     </footer>
+
+    <div class="scroller scroller--hidden"><i class="fa-solid fa-arrow-up"></i></div>
+
 </body>
 </html>

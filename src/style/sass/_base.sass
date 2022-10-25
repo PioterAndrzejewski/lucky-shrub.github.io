@@ -1,34 +1,292 @@
 body
-    background-color: mix(white, $main-light, 80)
+    background-color: $main-light
 
-.header__logo
-    display: block
+html
+    scroll-snap-type: y mandatory
+
+.login-bar
+    scroll-snap-align: start
+    position: fixed
+    width: 100%
+    top: 0
+    border-top: black solid 7px
+    border-color: $logo-darker
+    z-index: 5
+    &__text
+        position: absolute
+        right: 10%
+        padding: 0 1% 0.3% 1%
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+
+        font-size: 0.7em
+        font-family: $font-main
+        font-weight: 300
+        letter-spacing: 0.1em
+        color: $main-light
+        background-color: $logo-darker
+        &:hover
+            transition: 0.2s
+            color: white
+            padding: 0.3% 1% 0.3% 1%
+            cursor: pointer
+        &::before
+            content: "+"
+            padding-right: 15px
+            &:hover
+                color: white
+
+.main-logo
     position: absolute
-    margin: 1vh auto
-    height: 30vh
+    width: 16vh
+    height: 16vh
+    top: -3.5%
+    left: -20%
+    border-radius: 50%
+    background-color: $logo-darker
+    cursor: pointer
+    &__image
+        display: block
+        position: relative
+        margin: 1vh auto
+        height: 13vh
+
+.section-first
+    position: relative
+    max-width: 1024px
+    margin: 0 auto
+    height: 100vh
 
 .main-nav
+    color: $logo-darker
+    margin-top: 5vh
+    border-bottom: solid 1px $logo-darker
     &__list
         display: flex
-        justify-content: center
+        justify-content: right
         list-style: none
         text-align: center
     &__list-item
-        margin: 15px 30px
-        padding: 15px
-        border: black solid
+        padding: 10px 10px 0 10px
+        &:hover
+            background-color: $logo-darker
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+            transition: 0.3s
+            & a
+                color: $main-light
+        &--active
+            background-color: $logo-darker
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+            padding: 10px 0px 10px 20px
+            &::after
+                content: ""
+                position: relative
+                top: 200%
+                left: -45%
+                border-top: 10px solid $logo-darker
+                border-bottom: 10px solid transparent
+                border-left: 10px solid transparent
+                border-right: 10px solid transparent
+            & a
+                color: $main-light
+
     &__link
         display: inline-block
+        font-family: $font-main
+        font-size: 0.8em
+        letter-spacing: 0.7px
+        font-weight: 700
+        color: $logo-darker
+        text-decoration: none
+        text-transform: uppercase
+    &__divline
+        margin: 0 10px
+        width: 1px
+        height: 0.7em
+        align-self: flex-end
+        background-color: $logo-darker
+
+.slogan
+    display: flex
+    height: 75vh
+    align-items: flex-start
+    padding-top: 12%
+    &__text
+        font-family: $font-main
+        font-weight: 700
+        text-align: center
+        align-self: flex-start
+        margin-right: 5%
+        &--big
+            margin-bottom: 10px
+            font-size: 5em
+        &--medium
+            font-size: 2.6em
+            letter-spacing: 0.135em
+        &--mediumer
+            font-size: 2.2em
+        &--small
+            margin-top: 10%
+            font-size: 1em
+            text-align: justify
+            text-justify: inter-characters
+            text-transform: uppercase
+
+    &__image
+        display: block
+        max-height: 55vh
+        padding-top: 5%
+
+.main
+    position: relative
+    scroll-snap-align: center
+    height: 100vh
+    overflow: hidden
+    background-color: #0f0f0f
+    color: $main-light
+    font-family: $font-main
+    font-size: 2em
+    &__slogan_wrapper
+        position: absolute
+        top: 15%
+        left: 25%
+        transform: translateX(200vw)
+        &--animate
+            transition: linear 0.3s
+            transform: translateX(0)
+    &__slogan
+        font-family: $font-main
+        font-weight: 700
+        letter-spacing: 1.5px
+    &__slogan-contact
+        display: inline-block
+        margin-top: 15px
+        padding-bottom: 10px
+        font-weight: 300
+        color: white
+        text-decoration: none
+        transition: letter-spacing 4s linear
+        &:hover
+            border-bottom: white solid 1px
+        &--animate
+            letter-spacing: 2px
 
 .main-section
+    position: absolute
     display: flex
+    top: 25%
+    right: 10%
+    height: 40%
+    transform: translateX(-200vw)
+    &--animate
+        transition: linear 1s
+        transform: translateX(0)
 
 .article
+    display: block
+    position: relative
     flex: 1
+    height: 100%
+    width: 300px
+    margin: 2%
+    font-size: 0.2em
+    background-color: $main-light
+    border-radius: 20px
+    &__heading
+        position: absolute
+        text-align: right
+        padding: 30px
+        top: 5%
+        right: 8%
+        font-weight: 700
+        text-transform: uppercase
+        color: white
+        font-size: 3em
+        filter: brightness(100%)
+    &__paragraph
+        width: 70%
+        position: absolute
+        bottom: 20%
+        padding: 20px
+        color: white
+        font-size: 2em
+    &:nth-child(1)
+        color: white
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.9)) , url('../../../assets/images/garden1.jpg')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: -50px
+    &:nth-child(2)
+        color: white
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.9)) , url('../../../assets/images/plants.jpg')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: -50px
+    &:nth-child(3)
+        color: white
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.9)) , url('../../../assets/images/team.jpg')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: -50px
 
 .footer
+    position: fixed
     display: flex
+    justify-content: center
+
+    height: 15vh
+    align-items: center
+    width: 100%
+    bottom: 0%
+
+    background-color: $logo-darker
     &__logo
-        flex: 1
+        display: block
+        height: 60%
+        padding-right: 6%
+        opacity: 0.8
     &__copyright
-        flex: 1
+        font-size: 0.9em
+        color: $main-light
+        font-family: $font-main
+        opacity: 0.8
+    &__image_1
+        display: block
+        position: relative
+        top: -80%
+        right: 20%
+        height: 80%
+    &__image_2
+        display: block
+        position: relative
+        top: -75%
+        left: 25%
+        height: 75%
+
+.scroller
+    position: fixed
+    width: 50px
+    height: 50px
+    bottom: 20%
+    right: 5%
+    border-radius: 50%
+    background-color: $logo-darker
+    cursor: pointer
+    opacity: 1
+    transition: 0.3s
+    &:hover
+        transition: 0.5s
+        transform: translateY(-15px)
+    & i
+        marin: 0 auto
+        top: 27%
+        left: 33%
+        display: block
+        position: relative
+        color: $main-light
+        font-size: 1.5em
+    &--hidden
+        opacity: 0.3
+        display: none

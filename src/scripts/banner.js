@@ -67,6 +67,6 @@ bannerElement.addEventListener("click", () => {
 	bannerElement.classList.add("banner--hidden");
 	setTimeout(() => {
 		bannerElement.remove();
-	}, 1500);
+	}, 1200);
 	document.body.style.overflow = "visible";
 });

@@ -53,6 +53,7 @@ input {
 
 body {
   background-color: #ede7f1;
+  position: relative;
 }
 
 html {
@@ -61,7 +62,6 @@ html {
 }
 
 .login-bar {
-  scroll-snap-align: start;
   position: fixed;
   width: 100%;
   top: 0;
@@ -101,7 +101,7 @@ html {
   position: absolute;
   width: 16vh;
   height: 16vh;
-  top: -3.5%;
+  top: 4%;
   left: -20%;
   border-radius: 50%;
   background-color: #115E58;
@@ -115,6 +115,7 @@ html {
 }
 
 .section-first {
+  scroll-snap-align: start;
   position: relative;
   max-width: 1024px;
   margin: 0 auto;
@@ -122,8 +123,10 @@ html {
 }
 
 .main-nav {
+  position: relative;
+  padding-top: 10%;
+  margin-bottom: 6%;
   color: #115E58;
-  margin-top: 5vh;
   border-bottom: solid 1px #115E58;
 }
 .main-nav__list {
@@ -195,7 +198,6 @@ html {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-top: 12%;
 }
 .slogan__text {
   font-family: "Roboto Mono", "Arial", "sans serif";
@@ -208,13 +210,37 @@ html {
 .slogan__text--big {
   margin-bottom: 10px;
   font-size: 5em;
+  -webkit-transform: translateX(-200vw);
+          transform: translateX(-200vw);
+}
+.slogan__text--big--animate {
+  -webkit-animation: jumpin 1.2s linear;
+          animation: jumpin 1.2s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .slogan__text--medium {
   font-size: 2.6em;
   letter-spacing: 0.135em;
+  -webkit-transform: translateX(-200vw);
+          transform: translateX(-200vw);
+}
+.slogan__text--medium--animate {
+  -webkit-animation: jumpin 1.3s linear;
+          animation: jumpin 1.3s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .slogan__text--mediumer {
   font-size: 2.2em;
+  -webkit-transform: translateX(-200vw);
+          transform: translateX(-200vw);
+}
+.slogan__text--mediumer--animate {
+  -webkit-animation: jumpin 1s linear;
+          animation: jumpin 1s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .slogan__text--small {
   margin-top: 10%;
@@ -222,16 +248,32 @@ html {
   text-align: justify;
   text-justify: inter-characters;
   text-transform: uppercase;
+  -webkit-transform: translateX(-200vw);
+          transform: translateX(-200vw);
+}
+.slogan__text--small--animate {
+  -webkit-animation: jumpin 1.2s linear;
+          animation: jumpin 1.2s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .slogan__image {
   display: block;
   max-height: 55vh;
   padding-top: 5%;
+  -webkit-transform: translateX(200vw);
+          transform: translateX(200vw);
+}
+.slogan__image--animate {
+  -webkit-animation: jumpin 1.5s linear;
+          animation: jumpin 1.5s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .main {
   position: relative;
-  scroll-snap-align: center;
+  scroll-snap-align: end;
   height: 100vh;
   overflow: hidden;
   background-color: #0f0f0f;
@@ -427,6 +469,19 @@ html {
   display: none;
 }
 
+@-webkit-keyframes jumpin {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes jumpin {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 .banner {
   position: fixed;
   width: 100vw;

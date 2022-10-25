@@ -1,11 +1,11 @@
 body
     background-color: $main-light
+    position: relative
 
 html
     scroll-snap-type: y mandatory
 
 .login-bar
-    scroll-snap-align: start
     position: fixed
     width: 100%
     top: 0
@@ -40,7 +40,7 @@ html
     position: absolute
     width: 16vh
     height: 16vh
-    top: -3.5%
+    top: 4%
     left: -20%
     border-radius: 50%
     background-color: $logo-darker
@@ -52,14 +52,17 @@ html
         height: 13vh
 
 .section-first
+    scroll-snap-align: start
     position: relative
     max-width: 1024px
     margin: 0 auto
     height: 100vh
 
 .main-nav
+    position: relative
+    padding-top: 10%
+    margin-bottom: 6%
     color: $logo-darker
-    margin-top: 5vh
     border-bottom: solid 1px $logo-darker
     &__list
         display: flex
@@ -112,7 +115,6 @@ html
     display: flex
     height: 75vh
     align-items: flex-start
-    padding-top: 12%
     &__text
         font-family: $font-main
         font-weight: 700
@@ -122,26 +124,46 @@ html
         &--big
             margin-bottom: 10px
             font-size: 5em
+            transform: translateX(-200vw)
+            &--animate
+                animation: jumpin 1.2s linear
+                animation-fill-mode: forwards
         &--medium
             font-size: 2.6em
             letter-spacing: 0.135em
+            transform: translateX(-200vw)
+            &--animate
+                animation: jumpin 1.3s linear
+                animation-fill-mode: forwards
         &--mediumer
             font-size: 2.2em
+            transform: translateX(-200vw)
+            &--animate
+                animation: jumpin 1.0s linear
+                animation-fill-mode: forwards
         &--small
             margin-top: 10%
             font-size: 1em
             text-align: justify
             text-justify: inter-characters
             text-transform: uppercase
+            transform: translateX(-200vw)
+            &--animate
+                animation: jumpin 1.2s linear
+                animation-fill-mode: forwards
 
     &__image
         display: block
         max-height: 55vh
         padding-top: 5%
+        transform: translateX(200vw)
+        &--animate
+            animation: jumpin 1.5s linear
+            animation-fill-mode: forwards
 
 .main
     position: relative
-    scroll-snap-align: center
+    scroll-snap-align: end
     height: 100vh
     overflow: hidden
     background-color: #0f0f0f
@@ -290,3 +312,7 @@ html
     &--hidden
         opacity: 0.3
         display: none
+
+@keyframes jumpin
+    100%
+        transform: translateX(0)

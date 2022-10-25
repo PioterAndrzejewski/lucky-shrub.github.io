@@ -60,11 +60,24 @@ function changetext() {
 		bannerFunction = setTimeout(changetext, 150);
 	}
 }
+
+const logoButton = document.querySelector(".main-logo");
+const textBig = document.querySelector(".slogan__text--big");
+const mediumText = document.querySelector(".slogan__text--medium");
+const mediumerText = document.querySelector(".slogan__text--mediumer");
+const smallText = document.querySelector(".slogan__text--small");
+const sloganImage = document.querySelector(".slogan__image");
+
 document.body.style.overflow = "hidden";
 const bannerElement = document.querySelector(".banner");
 bannerElement.addEventListener("click", () => {
 	clearTimeout(bannerFunction);
 	bannerElement.classList.add("banner--hidden");
+	textBig.classList.add("slogan__text--big--animate");
+	mediumText.classList.add("slogan__text--medium--animate");
+	mediumerText.classList.add("slogan__text--mediumer--animate");
+	smallText.classList.add("slogan__text--small--animate");
+	sloganImage.classList.add("slogan__image--animate");
 	setTimeout(() => {
 		bannerElement.remove();
 	}, 1200);

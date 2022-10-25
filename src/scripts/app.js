@@ -1,5 +1,5 @@
 // logo button link
-const logoButton = document.querySelector(".main-logo");
+
 logoButton.addEventListener("click", () => {
 	window.location.href = "index.html";
 });
@@ -27,6 +27,7 @@ const scrollerHandler = () => {
 const sloganButton = document.querySelector(".main__slogan_wrapper");
 const contactButton = document.querySelector(".main__slogan-contact");
 const mainSection = document.querySelector(".main-section");
+
 const scrollAnimate = () => {
 	if (window.scrollY > 500) {
 		contactButton.classList.add("main__slogan-contact--animate");
